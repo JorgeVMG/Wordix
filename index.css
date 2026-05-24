@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+label{
+    margin-bottom: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vm;
+    height: 100vh;
+    flex-direction: column;
+}
+.carta{
+    background-color: white;
+    border-radius: 15px;
+    height: 150px; 
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.5);
+}
+.carta input{
+    border: 1px solid rgb(156, 155, 155);
+    height: 20px;
+    border-radius: 5px;
+    width: 100px;
+    outline: none;
+    margin-bottom: 20px;
+}
+.carta input:focus{
+    border: 1.5px solid rgb(118, 118, 118);
+}
+.carta input:hover{
+    cursor: pointer;
+}
+button{
+    width: 50px;
+    border: 1px solid rgb(84, 167, 84);
+    background-color: rgb(112, 210, 112);
+    height: 25px;
+    width: 70px;
+    border-radius: 5px;
+    padding: 5px;
+}
+button:hover{
+    cursor: pointer;
+    border: 1px solid rgb(71, 139, 71);
+    background-color: rgb(73, 183, 73);
+}
+#cuadros{
+    height: auto;
+    width: auto;
+    min-width: 200px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgb(0, 0, 0,0.5);
+}
+.cuadroLetra{
+    margin: 2px;
+    height: 35px;
+    width: 30px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fila{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.Presentacion{
+    background-color: white;
+    width: 60vw;
+    min-height: 50vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.5);
+}
+h1{
+    text-align: center;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.radio,.descripcion{
+    padding-left: 20px;
+}
+.radio{
+    display: flex;
+    flex-direction: column;
+}
+#inicio{
+    display: block;
+}
+#finJuego{
+    display: none;
+}
+#respuesta{
+    background-color: white;
+    border-radius: 15px;
+    height: auto; 
+    width: auto;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom:10px ;
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.5);
+}
+.ganador{
+    color: greenyellow;
+}
+.perdedor{
+    color: red;
+}

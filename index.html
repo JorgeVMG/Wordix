@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordix</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <div id="inicio">
+        <div class="modal">
+            <div class="Presentacion">
+                <h1>Wordix</h1>
+                <div class="descripcion">
+                    <h3>Adivina la palabra</h3>
+                    <p>Debes de ingresar la cantidad de letras y se te asignara una palabra aleatoria para adivinar</p>
+                </div>
+                <div class="radio">
+                    <h3>Ingresar cantidad de letras</h3>
+                    <div>
+                        <input type="radio" name="cantLetras" id="4" value="4">
+                        <label for="4">4 Letras</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="cantLetras" id="5" value="5">
+                        <label for="5">5 Letras</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="cantLetras" id="6" value="6">
+                        <label for="6">6 Letras</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="cantLetras" id="7" value="7">
+                        <label for="7">7 Letras</label>
+                    </div>
+                </div>
+                <div class="boton">
+                    <button onclick="inicio()">Jugar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="cuadros">
+        </div>
+        <div class="carta">
+            <label>Ingresar una palabra</label>
+            <input type="text" name="palabra_ingresada" id="palabra_ingresada" >
+            <button onclick="jugar()" id="jugar">Jugar</button>
+        </div>
+        <div id="finJuego">
+            <div id="respuesta">
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
