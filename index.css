@@ -5,6 +5,8 @@ body{
 }
 label{
     margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 .container{
     display: flex;
@@ -17,13 +19,17 @@ label{
 .carta{
     background-color: white;
     border-radius: 15px;
-    height: 150px; 
-    width: 200px;
+    height: auto;
+    min-height: 150px;
+    width: auto; 
+    min-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
+    padding-left: 5px ;
+    padding-right: 5px;
     box-shadow: 0 10px 20px rgb(0, 0, 0,0.5);
 }
 .carta input{
@@ -136,5 +142,20 @@ h1{
     color: greenyellow;
 }
 .perdedor{
+    color: red;
+}
+#error{
+    display: none;
+    max-width: 200px;
+}
+#error p{
+    text-align: center;
+    color: red;
+}
+#completar{
+    display: none;
+}
+#completar{
+    text-align: center;
     color: red;
 }

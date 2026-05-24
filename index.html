@@ -41,6 +41,9 @@
                 <div class="boton">
                     <button onclick="inicio()">Jugar</button>
                 </div>
+                <div id="completar">
+                    <p>Debes de elegit una cantidad de letras</p>
+                </div>
             </div>
         </div>
     </div>
@@ -48,9 +51,12 @@
         <div id="cuadros">
         </div>
         <div class="carta">
-            <label>Ingresar una palabra</label>
+            <label id="ingresar">Ingresar una palabra de</label>
             <input type="text" name="palabra_ingresada" id="palabra_ingresada" >
             <button onclick="jugar()" id="jugar">Jugar</button>
+            <div id="error">
+                <p>La palabra le falta/sobra caracteres o tiene espacios vacios</p>
+            </div>
         </div>
         <div id="finJuego">
             <div id="respuesta">

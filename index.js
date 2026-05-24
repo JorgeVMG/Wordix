@@ -17,7 +17,10 @@ window.addEventListener("load", function () {
 function inicio() {
     const cantLetras = document.querySelector('input[name="cantLetras"]:checked');
     const inicio = document.getElementById("inicio");
+    const completar = document.getElementById("completar");
     if (cantLetras) {
+        const labelIngresar = document.getElementById("ingresar");
+        labelIngresar.innerHTML += " "+cantLetras.value+" letras";
         inicio.style.display = "none";
         agregarCuadros(cantLetras.value);
         const arrayPalabras = JSON.parse(localStorage.getItem("palabrasDivinar"));
@@ -25,7 +28,7 @@ function inicio() {
         const palabraAlateria = arrayPalabras[cantLetras.value][indiceAlateorio];
         localStorage.setItem("palabraAlatoria", palabraAlateria);
     } else {
-        alert("nada");
+        completar.style.display= "block"
     }
 }
 function agregarCuadros(cantLetras) {
@@ -46,10 +49,14 @@ function cuadroLetra(cantLetras) {
 function jugar() {
     const input = document.getElementById("palabra_ingresada");
     const cantLetras = document.querySelector('input[name="cantLetras"]:checked').value;
-    const palabra = input.value;
+    const error = document.getElementById("error");
+    const palabra = input.value.replace(/\s/g, "");
     if (palabra.length !== Number(cantLetras)) {
         input.style.border = "1px solid red";
+        error.style.display = "block";
     } else {
+        input.style.border = "1px solid green";
+        error.style.display = "none";
         reyenarPalabra();
     }
 }
@@ -112,7 +119,7 @@ function letrasCorrectas(palabraA,palabraB) {
     let palabraNueva = palabraA;
     for(let i = 0; i<palabraA.length;i++){
         if(palabraA[i]===palabraB[i]){
-            letras.push({numletra:i,color:"green"});
+            letras.push({numletra:i,color:"rgb(73, 183, 73)"});
             palabraNueva = eliminarLetra(palabraNueva,i);
         }
     }
