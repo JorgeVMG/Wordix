@@ -60,7 +60,7 @@ function arregloCuadro() {
 }
 function reyenarPalabra() {
     const input = document.getElementById("palabra_ingresada");
-    const palabra = input.value;
+    const palabra = input.value.toUpperCase();
     input.value = "";
     const ingresarResultado = document.getElementById("respuesta");
     const fila = arregloCuadro();
@@ -100,8 +100,10 @@ function guardarLocal(palabra) {
 function compararPalabra(palabra){
     const palabraAAdivinar = localStorage.getItem("palabraAlatoria");
     let retorno = [{respuesta:true}]
-    if(palabraAAdivinar !== palabra){
-        retorno = [{respuesta:false},{respuestaLetras:letrasCorrectas(palabraAAdivinar,palabra)}];
+    const palabraUsuario = palabra.toUpperCase();
+    const palabraCorrecta = palabraAAdivinar.toUpperCase();
+    if(palabraCorrecta !== palabraUsuario){
+        retorno = [{respuesta:false},{respuestaLetras:letrasCorrectas(palabraCorrecta,palabraUsuario)}];
     }
     return retorno;
 }
